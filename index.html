@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <link rel="stylesheet" type="text/css" href="css/media.css">
+
+    <title>Js & Jq</title>
+  </head>
+  <body>
+    <!-- js -->
+    <h1 class="text-success">Javascript practice</h1>
+    <div class="container">
+      
+          <h1 class="text-primary">1.click for text change</h1>
+          <h2 id="h2">good life</h2>
+          <button type="button" class="btn btn-info" onclick=" textChange()">click me</button>
+       
+    </div>
+    <br>
+<div class="container">
+  <!-- bulb -->
+  <h1 class="text-primary">2.javascript changes the value of src attribute of an img</h1>
+  <button type="button" class="btn btn-danger" onclick="on()">Turn on the light</button>
+  <img src="images/pic_bulboff.gif" id="light">
+  <button type="button" class="btn btn-danger" onclick="off()">Turn on the light</button>
+  <!-- bulb -->
+
+  <!-- font size -->
+  <h1 class="text-primary">3.javascript changes the style of html element</h1>
+  <p id="size">Lorem ipsum dolor sit amet consectetur.</p>
+  <button type="button" class="btn btn-danger" onclick="size()">click to change font size</button>
+  <!-- font size -->
+
+  <!-- hide-->
+  <h1 class="text-primary">4.javascript can hide html element</h1>
+  <p id="hd">Lorem ipsum dolor sit amet consectetur.</p>
+  <button type="button" class="btn btn-danger" onclick="hide()">click to hide</button>
+  <!-- hide -->
+
+
+</div>
+
+   <!-- js -->
+
+
+   <!-- jq -->
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+<h1 class="text-success">Jquery practice</h1>
+
+
+
+<div class="container">
+  <h1 class="text-primary">1.click to show</h1>
+  <button class="s_alert">show alert</button>
+</div>
+
+<div class="container">
+  <h1 class="text-primary">2.click to hide text</h1>
+  <button type="button" class="btn btn-danger" id="hide">hide</button>
+  <button type="button" class="btn btn-danger" id="show">show</button>
+  <button type="button" class="btn btn-danger" id="s_h">show/hide</button>
+
+  <p id="h_t">Lorem, ipsum dolor sit amet.</p>
+
+</div><div class="container">
+  <h1 class="text-primary">3.click to fade text</h1>
+  <button type="button" class="btn btn-danger" id="fadeout">fadeout</button>
+  <button type="button" class="btn btn-danger" id="fadein">fadein</button>
+  <button type="button" class="btn btn-danger" id="f_t">fadetoggle</button>
+  
+  <p id="h_t1">Lorem, ipsum dolor sit amet.</p>
+  <br>
+  <h1 class="text-primary">4.another alert</h1>
+  <button type="button" class="btn btn-danger" id="alt" t>click to see alert</button>
+   
+
+</div>
+<!-- jq -->
+    <!-- JQ & JS links-->
+
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+<!-- js -->
+<script >
+  function textChange(){
+    document.getElementById("h2").innerHTML = "Alhamdulillah";
+  }
+</script>
+<!-- jq -->
+<script >
+ $(document).ready(function(){
+// alert
+ $('.s_alert').click(function(){
+alert("hello world");
+ });
+// hide
+$('#hide').click(function(){
+$('#h_t').hide("slow");
+});
+// show
+$('#show').click(function(){
+$('#h_t').show("fast");
+});
+// toggle
+$('#s_h').click(function(){
+$('#h_t').toggle(1000);
+});
+// fadeout
+$('#fadeout').click(function(){
+$('#h_t1').fadeOut();
+});
+// fadein
+$('#fadein').click(function(){
+$('#h_t1').fadeIn();
+});
+// fadetoggle
+$('#f_t').click(function(){
+$('#h_t1').fadeToggle(1000);
+});
+
+ });
+</script>
+
+  </body>
+</html>
